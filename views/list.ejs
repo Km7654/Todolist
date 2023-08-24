@@ -1,0 +1,38 @@
+
+
+<%- include("header") -%>
+
+
+    <div class="box">
+        <div class="heading">
+            <h1>
+                <%= listtitle %>
+            </h1>
+        </div>
+
+        <div class="main">
+
+            <% newlistitems.forEach(function(element){ %>
+                <div class="content">
+                    
+                    <p>
+                        <%= element.name %>
+                    </p>
+                    <form action="/rm" method="post">
+                        <input type="hidden" value="<%= element.name %>" name="deleteelement">
+                        <button type="submit">Cancel</button>
+                    </form>
+                </div>
+                <% }) %>
+
+
+                    <form class="formclass" action="/" method="post">
+                        <input type="text" placeholder="Enter your task here" name="newitem" id="inp1" required autocomplete="off">
+                        <button type="submit" name="list" value=<%= listtitle %>>Add</button>
+                    </form>
+        </div>
+
+    </div>
+
+    <%- include("footer") -%>
+
