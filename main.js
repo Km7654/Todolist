@@ -7,7 +7,7 @@ const app=express();
 
 let items=[];
 
-mongoose.connect('mongodb+srv://km7654:UwVeAop2gz4lRPEy@cluster0.m7bmpyn.mongodb.net/todolistDB');
+mongoose.connect('mongodb+srv://km7654:kaushik0089@cluster0.m7bmpyn.mongodb.net/todolistDB');
 
 app.set("view engine","ejs");
 app.use(bodyparser.urlencoded({extended:true}));
